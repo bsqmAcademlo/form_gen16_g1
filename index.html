@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <form id="form">
+        <label for="name">Nombre: </label>
+        <input type="text" placeholder="Ingrese su nombre" id="name" name="name">
+        <br>
+        <br>
+
+        <label for="age">edad: </label>
+        <input type="number" placeholder="Ingrese su edad" id="age" name="age">
+
+        <br>
+        <br>
+
+        <label for="email">email: </label>
+        <input type="email" placeholder="Ingrese su email" id="email" name="email">
+
+        <br>
+        <br>
+
+        <label for="pass">contraseña: </label>
+        <input type="password" placeholder="crea una contraseña" id="pass" name="pass">
+
+        <br>
+        <br>
+
+        <label for="pass1">repita contraseña: </label>
+        <input type="password" placeholder="repite tu contraseña" id="pass1" name="pass1">
+
+        <br>
+        <br>
+
+        <select name="country" id="country">
+            <option value="">De donde eres</option>
+            <option value="1">Colombia</option>
+            <option value="2">Argentina</option>
+            <option value="3">Mexico</option>
+            <option value="4">Venezuela</option>
+        </select>
+
+        <br>
+        <br>
+
+        <input type="checkbox" name="term" id="term">
+        <label for="term">Aceptas terminos y condiciones</label>
+
+        <br>
+        <br>
+
+        <label>Que genero eres</label>
+        <div>
+            <input type="radio" name="gender" value="M" id="men">
+            <label for="men">Masculino</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="F" id="women">
+            <label for="women">Femenino</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="O" id="other">
+            <label for="other">Otro</label>
+        </div>
+
+        <br>
+        <br>
+
+        <label for="comment">Dejame un comentario</label>
+        <br>
+        <textarea name="comment" id="comment" placeholder="Escribe aqui..."></textarea>
+
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
