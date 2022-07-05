@@ -1,4 +1,5 @@
 const form = document.querySelector("#form");
+const dataUser = document.querySelector("#data_user");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -31,15 +32,39 @@ form.addEventListener("submit", function (event) {
         return alert("Las contra no coinciden");
     }
 
-    console.log({
-        name,
-        age,
-        email,
-        pass,
-        pass1,
-        country,
-        term,
-        gender,
-        comment,
-    });
+    let html = `
+        <h2>Nombre: ${name}</h2>
+        <p>Edad: ${age}</p>
+        <p>Email: ${email}</p>
+        <p>contraseña: ${pass}</p>
+        <p>Pais ${country}</p>
+        <p>Genero: ${gender}</p>
+        <p>Comentarios: ${comment}</p>
+
+        <button class="btn btnVolver" onclick='volver()'>volver</button>
+    `;
+
+    dataUser.innerHTML = html;
+
+    // form.hidden = true
+    event.target.hidden = true;
+    dataUser.hidden = false;
 });
+
+// document.addEventListener("click", function (event) {
+//     if (event.target.classList.contains("btnVolver")) {
+//         form.hidden = false;
+//         form.reset();
+//         dataUser.hidden = true;
+//     }
+// });
+
+function volver() {
+    form.hidden = false;
+    form.reset();
+    dataUser.hidden = true;
+}
+
+// volver.onclick = function () {
+//     alert("Estas dandole clic");
+// };
